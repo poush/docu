@@ -159,73 +159,128 @@
                                     </p>
                                 </div>
                             </section>
-
-                            <section id="app-json-create-section" class="doc-section">
-                                <h2 class="section-title">Creating the app.json</h2>
-                                <div class="section-block">
+                            <section id="key-description-section" class="doc-section">
+                                    <h2 class="section-title">Understading The  <code>app.json</code>  </h2>
+                                    <br>
                                     <p>
                                         <code>app.json</code> app.json is   a manifest file which provides information to deploy your app to Digital Ocean .This file describes about the image ,application and the post deploy commands of your application
-                                          
+                                        <br>
                                         Here’s a sample app.json file:
-                                </p>
-                                <pre><code class="language-markup">
-                                {
-                                  "name": "Node.js Sample",
-                                  "image": "",
-                                  "app": "https://node-js-sample.herokuapp.com/node.png",
-                                  "description": "A barebones Node.js app using Express 4",
-                                  "repository": "https://github.com/heroku/node-js-sample",
-                                  "post_deploy": ["node", "express", "static"]
-                                }
-                                </code>
-                                </pre>
-                                <section id="key-description-section" class="doc-section">
-                                    <h2 class="section-title">Understading the <code>app.json</code></h2>
+                                    </p>
+                                    <br>
                                     <div id="name-app-json"  class="section-block">
                                         <h3 class="block-title">name</h3>
+                                        <br>
                                         <p>
-                                            Contains your application name to be deployed on DigitalOcean platform. It takes lowercase alphabets (a-z), digits (0-9); any special characters or space are not accepted.
+                                            Contains your application name to be deployed on DigitalOcean platform. It takes lowercase alphabets (a-z), digits (0-9) ; any special characters or space are not accepted.
+                                            <br>
+                                            For Example:
+
                                         </p>
+                                        <pre><code class="language-markup">
+                                        {
+                                            "name": "Node.js Sample"
+                                        }
+                                        </code>
+                                        </pre>
                                         
                                     </div><!--//section-block-->
                                     <div id="image-app-json"  class="section-block">
                                         <h3 class="block-title">image</h3>
+                                        <br>
                                         <p> 
                                             It can contain any of the supported images for the droplet being created.
                                         </p>
+
+                                        <pre><code class="language-markup">
+                                        {
+                                            "image": "lamp"
+                                        }
+                                        </code>
+                                        </pre>
+
                                         <!-- insert screenshot of our createtdo button -->
                                         
                                     </div><!--//section-block-->
                                     
                                     <div id="app-dscrptn-app-json"  class="section-block">
                                         <h3 class="block-title">app</h3>
+                                        <br>
                                         <p>
                                             Copy the generated script and paste it in your README file on your repository. The 'Deploy to DO' button will appear in its place.
                                         </p>
+                                        <pre><code class="language-markup">
+                                        {
+                                            "age": https://node-js-sample.herokuapp.com/node.png",
+                                        }
+                                        </code>
+                                        </pre>
+
                                         <!-- another picture of generated script -->
                                     </div><!--//section-block-->
                                     <div id="description-app-json"  class="section-block">
                                         <h3 class="block-title">description</h3>
+                                        <br>
                                         <p>
                                             Contains the description of your application. 
                                         </p>
+                                        <pre><code class="language-markup">
+                                        {
+                                            "description": "A barebones Node.js app using Express 4",
+                                        }
+                                        </code>
+                                        </pre>
+
                                         
                                     </div><!--//section-block-->
                                     <div id="repository-app-json"  class="section-block">
                                         <h3 class="block-title">repository</h3>
+                                        <br>
                                         <p>
                                             It contains the link to your github repository. You must copy and paste it from the github repository that you want to create the deploy button for. Do not put any trailing slashes.
                                         </p>
+                                        <pre><code class="language-markup">
+                                        {
+                                            "repository": "https://github.com/heroku/node-js-sample",
+                                        }
+                                        </code>
+                                        </pre>
+
                                         
                                     </div><!--//section-block-->
                                     <div id="post-deploy-app-json"  class="section-block">
                                         <h3 class="block-title">post_deploy</h3>
+                                        <br>
                                         <p>
                                             blah blah..lorem ipsum
                                         </p>
+                                        <pre><code class="language-markup">
+                                        {
+                                            "repository": "https://github.com/heroku/node-js-sample",
+                                        }
+                                        </code>
+                                        </pre>
                                         
                                     </div><!--//section-block-->
-
+                                    <div class="section-block" id="final-app-json" >
+                                    <h3 class="block-title">
+                                        Final app.json
+                                    </h3><br>
+                                    <p>
+                                        Finally your <code>app.json</code> should look like
+                                    </p>
+                                    <pre><code class="language-markup">
+                                    {
+                                    "name": "Node.js Sample",
+                                      "image": "",
+                                    "app": "https://node-js-sample.herokuapp.com/node.png",
+                                    "description": "A barebones Node.js app using Express 4",
+                                  "repository": "https://github.com/heroku/node-js-sample",
+                                  "post_deploy": ["node", "express", "static"]
+                                    }
+                                </code>
+                                </pre>
+                                </div>
                                 </section>
                             </div>
                         </div><!--//content-inner-->
@@ -248,6 +303,27 @@
                                         <li><a class="scrollto" href="#step1hiw">Step One</a></li>
                                         <li><a class="scrollto" href="#step2hiw">Step Two</a></li>
                                         <li><a class="scrollto" href="#step3hiw">Step Three</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                                <li>
+                                    <a class="scrollto" href="#about-project-section">About Project</a>
+                                </li>
+                                <li>
+                                    <a class="scrollto" href="#requirements-section">Requirements</a>
+                                </li>
+                                <li>
+                                    <a class="scrollto" href="#key-description-section">Understanding app.json</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#name-app-json">Name</a></li>
+                                        <li><a class="scrollto" href="#image-app-json">Image</a></li>
+                                        <li><a class="scrollto" href="#app-dscrptn-app-json">App</a></li>
+                                        <li><a class="scrollto" href="#description-app-json">Description</a></li>
+                                        <li><a class="scrollto" href="#repository-app-json">Repository</a></li>
+                                        <li><a class="scrollto" href="#post-deploy-app-json">Post Deploy</a></li>
+                                        <li><a class="scrollto" href="#final-app-json">Final</a></li>
+
+
+
                                     </ul><!--//nav-->
                                 </li>
                             </ul><!--//doc-menu-->
