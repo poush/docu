@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <!-- <head>
-    <title>Responsive website template for documentations</title> -->
+    <title>Deploy-to-DO | Docs</title> -->
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,8 +48,8 @@
         <div class="doc-wrapper">
             <div class="container">
                 <div id="doc-header" class="doc-header text-center">
-                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
-                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: Jan 25th, 2016</div>
+                    <h1 class="doc-title"> Quick Start</h1>
+                    
                 </div><!--//doc-header-->
                 <div class="doc-body">
                     <div class="doc-content">
@@ -172,16 +172,63 @@
                                 <pre><code class="language-markup">
                                 {
                                   "name": "Node.js Sample",
+                                  "image": "",
+                                  "app": "https://node-js-sample.herokuapp.com/node.png",
                                   "description": "A barebones Node.js app using Express 4",
                                   "repository": "https://github.com/heroku/node-js-sample",
-                                  "logo": "https://node-js-sample.herokuapp.com/node.png",
-                                  "keywords": ["node", "express", "static"]
+                                  "post_deploy": ["node", "express", "static"]
                                 }
                                 </code>
                                 </pre>
+                                <section id="key-description-section" class="doc-section">
+                                    <h2 class="section-title">Understading the <code>app.json</code></h2>
+                                    <div id="name-app-json"  class="section-block">
+                                        <h3 class="block-title">name</h3>
+                                        <p>
+                                            Contains your application name to be deployed on DigitalOcean platform. It takes lowercase alphabets (a-z), digits (0-9); any special characters or space are not accepted.
+                                        </p>
+                                        
+                                    </div><!--//section-block-->
+                                    <div id="image-app-json"  class="section-block">
+                                        <h3 class="block-title">image</h3>
+                                        <p> 
+                                            It can contain any of the supported images for the droplet being created.
+                                        </p>
+                                        <!-- insert screenshot of our createtdo button -->
+                                        
+                                    </div><!--//section-block-->
                                     
-                                </div>
-                            </section>
+                                    <div id="app-dscrptn-app-json"  class="section-block">
+                                        <h3 class="block-title">app</h3>
+                                        <p>
+                                            Copy the generated script and paste it in your README file on your repository. The 'Deploy to DO' button will appear in its place.
+                                        </p>
+                                        <!-- another picture of generated script -->
+                                    </div><!--//section-block-->
+                                    <div id="description-app-json"  class="section-block">
+                                        <h3 class="block-title">description</h3>
+                                        <p>
+                                            Contains the description of your application. 
+                                        </p>
+                                        
+                                    </div><!--//section-block-->
+                                    <div id="repository-app-json"  class="section-block">
+                                        <h3 class="block-title">repository</h3>
+                                        <p>
+                                            It contains the link to your github repository. You must copy and paste it from the github repository that you want to create the deploy button for. Do not put any trailing slashes.
+                                        </p>
+                                        
+                                    </div><!--//section-block-->
+                                    <div id="post-deploy-app-json"  class="section-block">
+                                        <h3 class="block-title">post_deploy</h3>
+                                        <p>
+                                            blah blah..lorem ipsum
+                                        </p>
+                                        
+                                    </div><!--//section-block-->
+
+                                </section>
+                            </div>
                         </div><!--//content-inner-->
                     </div><!--//doc-content-->
                     <div class="doc-sidebar hidden-xs">
@@ -234,4 +281,3 @@
     
 </body>
 </html> 
-
